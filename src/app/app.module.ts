@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { OfferComponent } from './offer/offer.component';
 
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { CustomDateRangePickerModule } from './sharedComponents/custom-date-range-picker/custom-date-range-picker.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { CustomDateRangePickerModule } from './sharedComponents/custom-date-rang
     HeaderComponent,
     EmployeeComponent,
     OfferComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     NgxDaterangepickerMd.forRoot({
       format: 'DD/MM/YYYY', // could be 'YYYY-MM-DDTHH:mm:ss.SSSSZ'
       displayFormat: 'DD/MM/YYYY', // default is format value

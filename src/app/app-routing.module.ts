@@ -4,8 +4,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeeComponent } from './employee/employee.component';
 import { OfferComponent } from './offer/offer.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
+  {
+    path: 'login',
+    pathMatch: 'full',
+    component: LoginComponent,
+    children: [
   {
     path:'attendance',
     component:AttendanceComponent
@@ -17,7 +23,8 @@ const routes: Routes = [
   {
     path:'offer-letter',
     component:OfferComponent
-  },
+  },]
+}
 ];
 
 @NgModule({
