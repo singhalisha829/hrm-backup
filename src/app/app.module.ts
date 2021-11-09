@@ -14,6 +14,8 @@ import { OfferComponent } from './offer/offer.component';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { CustomDateRangePickerModule } from './sharedComponents/custom-date-range-picker/custom-date-range-picker.module';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { LoginComponent } from './login/login.component';
     EmployeeComponent,
     OfferComponent,
     LoginComponent,
+    HomeComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
