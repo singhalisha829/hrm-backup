@@ -1,6 +1,13 @@
+import { HttpService } from './utils/services/http.service';
+import { LoginService } from './utils/services/login.service';
+import { UtilsService } from 'src/app/services/utils.service';
+import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CoreServiceModule } from './modules/coreService.module';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,7 +39,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule, 
+    HttpClientModule,
+    HttpModule,
+    CoreServiceModule,
     NgxDaterangepickerMd.forRoot({
       format: 'DD/MM/YYYY', // could be 'YYYY-MM-DDTHH:mm:ss.SSSSZ'
       displayFormat: 'DD/MM/YYYY', // default is format value
@@ -40,7 +50,11 @@ import { WelcomeComponent } from './welcome/welcome.component';
     CustomDateRangePickerModule,
   
   ],
-  providers: [],
+  providers: [
+    UtilsService,
+    LoginService,
+    HttpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { AppComponent } from './app.component';
+
 import { AttendanceComponent } from './attendance/attendance.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -7,6 +7,7 @@ import { OfferComponent } from './offer/offer.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { setFullYear } from 'ngx-bootstrap/chronos/utils/date-setters';
 
 const routes: Routes = [
   {
@@ -39,7 +40,12 @@ const routes: Routes = [
     path:'offer-letter',
     component:OfferComponent
   },]
-}
+},
+{path: '**', pathMatch: 'full', component: LoginComponent}
+];
+
+export const componentsArr = [
+  LoginComponent, HomeComponent, AttendanceComponent, OfferComponent, WelcomeComponent
 ];
 
 @NgModule({
