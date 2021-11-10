@@ -61,12 +61,18 @@
               </div>
               <div class="form-group col-sm-3">
                 <label> Date of Birth:<span style="color: red;">*</span> </label>
-                
+                <app-custom-dateRangePicker [singleCalendar]="true" [resetCalendar]="true"
+                  (onDateRangeSelection)="onDateRangeSelection($event)"></app-custom-dateRangePicker>
+               
               </div>
   
               <div class="form-group col-sm-3 col-12">
                   <label for="pi_file">Gender:<span style="color: red;">*</span> </label>
-                  <!-- <input name="pi_file" (change)="assignfile($event.target.files)" type="file" id="pi_file" /> -->
+                  <select class="form-control">
+                    <option>--Select Gender--</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
               </div>
   
               
@@ -95,7 +101,12 @@
                   </div>
                   
                   <h6>Please mention briefly about your family.</h6><br>
-                  <!--add family table-->
+                  <app-common-table
+                  [headers] = "cityHeaders"
+                  [rows] = "cityArr"
+                  (onSortClicked)="onSortHeaderClicked($event)"
+                  >
+                  </app-common-table>
                   <br>
                 <h4>Education Qualification</h4><hr>
                 <h6>Please mention your Qualification class X onwards, including Degrees and Diplomas.</h6><br>

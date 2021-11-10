@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilsService } from '../services/utils.service';
 
 @Component({
   selector: 'app-offer',
@@ -9,7 +10,8 @@ export class OfferComponent implements OnInit {
 
   isHidden!: boolean;
   public buttonName:any = 'Create New Offer';
-  constructor() { }
+  addNewOffer: any = {};
+  constructor( public utilsService: UtilsService,) { }
 
   ngOnInit(): void {
   }
@@ -28,7 +30,11 @@ export class OfferComponent implements OnInit {
     this.isHidden = !this.isHidden;
   }
 
-  onDateRangeSelection(){
-
+    onDateRangeSelection(event: { startDate: string | number | Date; }) {
+      this.addNewOffer.date = this.utilsService.formatDate(event.startDate)
   }
+  onDateRangeSelection1(event: { startDate: string | number | Date; }) {
+    this.addNewOffer.expected_date = this.utilsService.formatDate(event.startDate)
 }
+  }
+    
