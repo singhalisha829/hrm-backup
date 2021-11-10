@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { setFullYear } from 'ngx-bootstrap/chronos/utils/date-setters';
 import { SickLeaveComponent } from './sick-leave/sick-leave.component';
+import { AppointmentComponent } from './appointment/appointment.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path:'sick-leave',
     component:SickLeaveComponent
+  },
+  {
+    path:'appointment',
+    component:AppointmentComponent
   },]
 },
 {path: '**', pathMatch: 'full', component: LoginComponent}
