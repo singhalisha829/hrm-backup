@@ -31,6 +31,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { TabsModule } from 'ngx-tabset';
 import { SickLeaveComponent } from './sick-leave/sick-leave.component';
 import { AppointmentComponent } from './appointment/appointment.component';
+import { NoticeComponent } from './notice/notice.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AppointmentComponent } from './appointment/appointment.component';
     WelcomeComponent,
     SickLeaveComponent,
     AppointmentComponent,
+    NoticeComponent,
   ],
   imports: [
     BrowserModule,
