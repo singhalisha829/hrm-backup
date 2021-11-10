@@ -15,7 +15,7 @@ export const environment1 = {
   apiURL: 'http://3.6.118.235:9000/api',
   // apiURL: 'http://3.6.118.235:9000/api',
   localServe: true, // set to false when not in local dev environment
-};
+};  
 
 /*
  * For easier debugging in development mode, you can import the following file
