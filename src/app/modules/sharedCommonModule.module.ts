@@ -16,9 +16,16 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 // import { PermissionPipe, TimeSincePipe, DateSincePipe } from '../utils/sharedComponents/appPipe';
  import { CommonTableModule } from '../sharedComponents/common-table/common-table.module';
  import { CustomDateRangePickerModule } from '../sharedComponents/custom-date-range-picker/custom-date-range-picker.module';
+ import { FullCalendarModule } from '@fullcalendar/angular'; 
+import interactionPlugin from '@fullcalendar/interaction';
+import dayGridPlugin from '@fullcalendar/daygrid';
 // import { AllowSingleClickDirective } from '../utils/services/allow-single-click.directive';
 // import { NgxPrintModule } from 'ngx-print';
 
+FullCalendarModule.registerPlugins([ 
+  interactionPlugin,
+  dayGridPlugin
+]);
 @NgModule({
   declarations: [
     // PermissionPipe,
@@ -31,6 +38,8 @@ import { AlertModule } from 'ngx-bootstrap/alert';
     FormsModule,
     //NgxPrintModule,
     ReactiveFormsModule,
+    FullCalendarModule,
+
     //PaginationModule.forRoot(),
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
@@ -72,6 +81,7 @@ import { AlertModule } from 'ngx-bootstrap/alert';
     BsDropdownModule,
     ModalModule,
     AlertModule,
+    FullCalendarModule,
     // PermissionPipe,
     // TimeSincePipe,
     // DateSincePipe,

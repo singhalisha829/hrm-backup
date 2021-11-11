@@ -33,6 +33,7 @@ import { SickLeaveComponent } from './sick-leave/sick-leave.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { NoticeComponent } from './notice/notice.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LeaveCalendarComponent } from './leave-calendar/leave-calendar.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppointmentComponent,
     NoticeComponent,
     DashboardComponent,
+    LeaveCalendarComponent,
   ],
   imports: [
     BrowserModule,

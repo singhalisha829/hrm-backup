@@ -18,7 +18,7 @@
         <tbody>
              <tr *ngFor="let data of Employee;">
             <th style="width: 500px;"> {{ data }}</th>
-            <td style="width: 150px;">  <input type="radio" id="present" name="attendance"> </td>
+            <td style="width: 150px; ">  <input type="radio" id="present" name="attendance"> </td>
             <td style="width: 150px;">  <input type="radio" id="absent" name="attendance"></td>
             <td style="width: 150px;">  <input type="radio" id="meeting" name="attendance"></td>
             <td style="width: 150px;">  <input type="radio" id="first" name="attendance"></td>
@@ -28,5 +28,9 @@
         </table>
 
     </div>
-       
+    <div class="col-12 pd-0" style="margin-top: 10px;">
+        <button type="submit" class="btn btn-success float-right" 
+         (click)="submit()" style="margin-right: 60px;"
+         >Submit</button>
+         </div>
    

@@ -12,6 +12,7 @@ import { SickLeaveComponent } from './sick-leave/sick-leave.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { NoticeComponent } from './notice/notice.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LeaveCalendarComponent } from './leave-calendar/leave-calendar.component';
 
 const routes: Routes = [
   {
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     path:'dashboard',
     component:DashboardComponent
+  },
+  {
+    path:'leave-calendar',
+    component:LeaveCalendarComponent
   },]
 },
 {path: '**', pathMatch: 'full', component: LoginComponent}
