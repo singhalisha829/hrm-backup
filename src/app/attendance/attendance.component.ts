@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttendanceComponent implements OnInit {
 
+  Employee = ['alisha','arjun','abhishek'];
+  currentDate = new Date();
+  now: number= Date.now();
   constructor() { }
 
   ngOnInit(): void {
   }
+
+ 
 
 }

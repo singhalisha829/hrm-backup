@@ -11,6 +11,7 @@ import { setFullYear } from 'ngx-bootstrap/chronos/utils/date-setters';
 import { SickLeaveComponent } from './sick-leave/sick-leave.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { NoticeComponent } from './notice/notice.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,10 @@ const routes: Routes = [
   {
     path:'notice',
     component:NoticeComponent
+  },
+  {
+    path:'dashboard',
+    component:DashboardComponent
   },]
 },
 {path: '**', pathMatch: 'full', component: LoginComponent}

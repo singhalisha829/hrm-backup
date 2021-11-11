@@ -32,6 +32,7 @@ import { TabsModule } from 'ngx-tabset';
 import { SickLeaveComponent } from './sick-leave/sick-leave.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { NoticeComponent } from './notice/notice.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { NoticeComponent } from './notice/notice.component';
     SickLeaveComponent,
     AppointmentComponent,
     NoticeComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

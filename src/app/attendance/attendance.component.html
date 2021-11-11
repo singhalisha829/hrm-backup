@@ -1,7 +1,32 @@
+<h3 style="text-align:center;">Attendance</h3><hr>
+<h5>Today</h5><br>
+<h5>{{now | date:'fullDate'}}</h5>
+<h5>{{now | date:'h:mm:ss a'}}</h5>
+<br>
+<div class="col-sm-12" >
+    <table class="table border mt-1" >
+        <thead class="sticky-top">
+        <tr>
+            <th style="width: 500px;">Name</th>
+            <th style="width: 150px;">Present</th>
+            <th style="width: 150px;">Absent</th>
+            <th style="width: 150px;">Meeting</th>
+            <th style="width: 150px;">First 1/2 Leave</th>
+            <th style="width: 150px;">Second 1/2 Leave</th>
+        </tr>
+        </thead>
+        <tbody>
+             <tr *ngFor="let data of Employee;">
+            <th style="width: 500px;"> {{ data }}</th>
+            <td style="width: 150px;">  <input type="radio" id="present" name="attendance"> </td>
+            <td style="width: 150px;">  <input type="radio" id="absent" name="attendance"></td>
+            <td style="width: 150px;">  <input type="radio" id="meeting" name="attendance"></td>
+            <td style="width: 150px;">  <input type="radio" id="first" name="attendance"></td>
+            <td style="width: 150px;">  <input type="radio" id="second" name="attendance"></td>
+            </tr> 
+        </tbody>
+        </table>
 
-
-
-
-
-
-<div style="background-image: url('../../../assets/images/background.jpg');"></div>
+    </div>
+       
+   
