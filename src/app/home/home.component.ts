@@ -17,4 +17,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // ngAfterViewInit(){
+  //   setTimeout( ()=>{
+  //   localStorage.clear();
+  //   this.router.navigate(['login'])
+  //   console.log(localStorage)
+  //   }, 5000)
+    
+  // }
 }

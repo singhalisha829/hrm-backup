@@ -34,7 +34,8 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('role', (res.data.output.role || null));
         localStorage.setItem('email', (res.data.output.email || null));
         localStorage.setItem('userId', (res.data.output.user_id || null));
-        this.router.navigate(['/'])
+        console.log(localStorage)
+        this.router.navigate(['welcome'])
       }else{
         this.toaster.error(res.status.description);
       }
