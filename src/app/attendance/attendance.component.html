@@ -16,13 +16,13 @@
         </tr>
         </thead>
         <tbody>
-             <tr *ngFor="let data of Employee;">
+             <tr *ngFor="let data of Employee;let i=index">
             <th style="width: 500px;"> {{ data }}</th>
-            <td style="width: 150px; ">  <input type="radio" id="present" name="attendance"> </td>
-            <td style="width: 150px;">  <input type="radio" id="absent" name="attendance"></td>
-            <td style="width: 150px;">  <input type="radio" id="meeting" name="attendance"></td>
-            <td style="width: 150px;">  <input type="radio" id="first" name="attendance"></td>
-            <td style="width: 150px;">  <input type="radio" id="second" name="attendance"></td>
+            <td style="width: 150px; ">  <input type="radio" id="present" name={{i}} ></td>
+            <td style="width: 150px;">  <input type="radio" id="absent" name={{i}}></td>
+            <td style="width: 150px;">  <input type="radio" id="meeting" name={{i}}></td>
+            <td style="width: 150px;">  <input type="radio" id="first" name={{i}}></td>
+            <td style="width: 150px;">  <input type="radio" id="second" name={{i}}></td>
             </tr> 
         </tbody>
         </table>
